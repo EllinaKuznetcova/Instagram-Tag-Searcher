@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		DC945CB11F1A45FA00755246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CB01F1A45FA00755246 /* main.m */; };
 		DC945CB41F1A45FA00755246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CB31F1A45FA00755246 /* AppDelegate.m */; };
-		DC945CB71F1A45FA00755246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CB61F1A45FA00755246 /* ViewController.m */; };
 		DC945CBA1F1A45FA00755246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC945CB81F1A45FA00755246 /* Main.storyboard */; };
 		DC945CBC1F1A45FA00755246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC945CBB1F1A45FA00755246 /* Assets.xcassets */; };
 		DC945CBF1F1A45FA00755246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC945CBD1F1A45FA00755246 /* LaunchScreen.storyboard */; };
 		DC945CCA1F1A45FA00755246 /* InstagramTTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CC91F1A45FA00755246 /* InstagramTTTests.m */; };
+		DC945CD71F1A4D8C00755246 /* PostsListByTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */; };
+		DC945CD91F1A501000755246 /* PostSearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CD81F1A501000755246 /* PostSearchPresenter.m */; };
+		DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CDC1F1A52E600755246 /* PostSearchModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +33,6 @@
 		DC945CB01F1A45FA00755246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC945CB21F1A45FA00755246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC945CB31F1A45FA00755246 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DC945CB51F1A45FA00755246 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DC945CB61F1A45FA00755246 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DC945CB91F1A45FA00755246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC945CBB1F1A45FA00755246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC945CBE1F1A45FA00755246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,12 @@
 		DC945CC51F1A45FA00755246 /* InstagramTTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC945CC91F1A45FA00755246 /* InstagramTTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramTTTests.m; sourceTree = "<group>"; };
 		DC945CCB1F1A45FA00755246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC945CD51F1A4D8C00755246 /* PostSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSearchView.h; sourceTree = "<group>"; };
+		DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsListByTagView.m; sourceTree = "<group>"; };
+		DC945CD81F1A501000755246 /* PostSearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostSearchPresenter.m; sourceTree = "<group>"; };
+		DC945CDA1F1A502500755246 /* PostSearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostSearchPresenter.h; sourceTree = "<group>"; };
+		DC945CDB1F1A52E600755246 /* PostSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSearchModel.h; sourceTree = "<group>"; };
+		DC945CDC1F1A52E600755246 /* PostSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostSearchModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,10 @@
 		DC945CAE1F1A45FA00755246 /* InstagramTT */ = {
 			isa = PBXGroup;
 			children = (
+				DC945CDE1F1A56CE00755246 /* Services */,
+				DC945CD41F1A4CB100755246 /* PostSearch */,
 				DC945CB21F1A45FA00755246 /* AppDelegate.h */,
 				DC945CB31F1A45FA00755246 /* AppDelegate.m */,
-				DC945CB51F1A45FA00755246 /* ViewController.h */,
-				DC945CB61F1A45FA00755246 /* ViewController.m */,
 				DC945CB81F1A45FA00755246 /* Main.storyboard */,
 				DC945CBB1F1A45FA00755246 /* Assets.xcassets */,
 				DC945CBD1F1A45FA00755246 /* LaunchScreen.storyboard */,
@@ -109,6 +115,26 @@
 				DC945CCB1F1A45FA00755246 /* Info.plist */,
 			);
 			path = InstagramTTTests;
+			sourceTree = "<group>";
+		};
+		DC945CD41F1A4CB100755246 /* PostSearch */ = {
+			isa = PBXGroup;
+			children = (
+				DC945CD51F1A4D8C00755246 /* PostSearchView.h */,
+				DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */,
+				DC945CDA1F1A502500755246 /* PostSearchPresenter.h */,
+				DC945CD81F1A501000755246 /* PostSearchPresenter.m */,
+				DC945CDB1F1A52E600755246 /* PostSearchModel.h */,
+				DC945CDC1F1A52E600755246 /* PostSearchModel.m */,
+			);
+			name = PostSearch;
+			sourceTree = "<group>";
+		};
+		DC945CDE1F1A56CE00755246 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC945CB71F1A45FA00755246 /* ViewController.m in Sources */,
+				DC945CD91F1A501000755246 /* PostSearchPresenter.m in Sources */,
 				DC945CB41F1A45FA00755246 /* AppDelegate.m in Sources */,
+				DC945CD71F1A4D8C00755246 /* PostsListByTagView.m in Sources */,
 				DC945CB11F1A45FA00755246 /* main.m in Sources */,
+				DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
