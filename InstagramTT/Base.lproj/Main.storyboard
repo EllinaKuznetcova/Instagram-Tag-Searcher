@@ -1,14 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z9y-Wk-jS6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View-->
+        <scene sceneID="euT-5Y-7aH">
+            <objects>
+                <viewController id="Z9y-Wk-jS6" customClass="LoginView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AYP-fi-AkU"/>
+                        <viewControllerLayoutGuide type="bottom" id="3R3-YH-YsR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nd5-FU-dPG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auy-0Z-C3x">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="auy-0Z-C3x" firstAttribute="top" secondItem="AYP-fi-AkU" secondAttribute="bottom" id="Cx6-gy-E4m"/>
+                            <constraint firstAttribute="trailing" secondItem="auy-0Z-C3x" secondAttribute="trailing" id="JIN-Ld-2c6"/>
+                            <constraint firstItem="auy-0Z-C3x" firstAttribute="leading" secondItem="Nd5-FU-dPG" secondAttribute="leading" id="SFx-W7-lpG"/>
+                            <constraint firstItem="3R3-YH-YsR" firstAttribute="top" secondItem="auy-0Z-C3x" secondAttribute="bottom" id="V0A-Hs-IZe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webViewContainer" destination="auy-0Z-C3x" id="4Tk-RL-cYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mb4-9e-jOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="-327"/>
+        </scene>
+        <!--Post Search View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PostSearchView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +53,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jGR-VW-MFn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No posts found by this tag" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlb-5y-WDc">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="olv-8j-BJZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jGR-VW-MFn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0WS-pG-37P"/>
+                            <constraint firstItem="jlb-5y-WDc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="5rY-r9-ClH"/>
+                            <constraint firstAttribute="trailing" secondItem="jlb-5y-WDc" secondAttribute="trailing" constant="16" id="A8N-VI-DiJ"/>
+                            <constraint firstItem="olv-8j-BJZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fm4-Fq-xQs"/>
+                            <constraint firstItem="jGR-VW-MFn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ip7-TN-TvF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="olv-8j-BJZ" secondAttribute="bottom" id="SNS-Pd-CTm"/>
+                            <constraint firstItem="jlb-5y-WDc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T2i-Fb-p4t"/>
+                            <constraint firstAttribute="trailing" secondItem="olv-8j-BJZ" secondAttribute="trailing" id="VLg-wd-pQD"/>
+                            <constraint firstItem="jlb-5y-WDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VMT-on-Il5"/>
+                            <constraint firstItem="olv-8j-BJZ" firstAttribute="top" secondItem="jGR-VW-MFn" secondAttribute="bottom" id="iag-dH-yLn"/>
+                            <constraint firstAttribute="trailing" secondItem="jGR-VW-MFn" secondAttribute="trailing" id="sgg-sN-LxS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
