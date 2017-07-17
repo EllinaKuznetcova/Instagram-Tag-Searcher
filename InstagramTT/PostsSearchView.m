@@ -7,6 +7,7 @@
 //
 
 #import "PostSearchView.h"
+#import "PostCell.h"
 
 @interface PostSearchView ()
 
@@ -20,16 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - TableView DataSource Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //TODO: add methods to presenter interface to retrieve number ob objects
+    return 10;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PostCell* cell = [tableView dequeueReusableCellWithIdentifier:[PostCell identifier]];
+    [cell prepareCell:nil likesCount:@"10" comment:@"Some cool comment"];
+    return cell;
+}
 
 @end

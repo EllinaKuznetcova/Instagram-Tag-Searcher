@@ -8,6 +8,7 @@
 
 #import "LoginView.h"
 #import "InstagramService.h"
+#import "Helpers.h"
 
 @interface LoginView ()
 
@@ -35,6 +36,7 @@
     
     if ([[[InstagramService alloc] init] checkTokenAndSaveFromURL:navigationAction.request.URL error:&error]) {
         decisionHandler(WKNavigationActionPolicyCancel);
+        [Helpers showPostSearchController];
     }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
