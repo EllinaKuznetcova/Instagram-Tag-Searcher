@@ -15,7 +15,7 @@
 		DC945CBC1F1A45FA00755246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC945CBB1F1A45FA00755246 /* Assets.xcassets */; };
 		DC945CBF1F1A45FA00755246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC945CBD1F1A45FA00755246 /* LaunchScreen.storyboard */; };
 		DC945CCA1F1A45FA00755246 /* InstagramTTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CC91F1A45FA00755246 /* InstagramTTTests.m */; };
-		DC945CD71F1A4D8C00755246 /* PostsListByTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */; };
+		DC945CD71F1A4D8C00755246 /* PostsSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CD61F1A4D8C00755246 /* PostsSearchView.m */; };
 		DC945CD91F1A501000755246 /* PostSearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CD81F1A501000755246 /* PostSearchPresenter.m */; };
 		DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CDC1F1A52E600755246 /* PostSearchModel.m */; };
 		DC945CE11F1A583A00755246 /* InstagramService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CE01F1A583A00755246 /* InstagramService.m */; };
@@ -51,7 +51,7 @@
 		DC945CC91F1A45FA00755246 /* InstagramTTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramTTTests.m; sourceTree = "<group>"; };
 		DC945CCB1F1A45FA00755246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC945CD51F1A4D8C00755246 /* PostSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSearchView.h; sourceTree = "<group>"; };
-		DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsListByTagView.m; sourceTree = "<group>"; };
+		DC945CD61F1A4D8C00755246 /* PostsSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsSearchView.m; sourceTree = "<group>"; };
 		DC945CD81F1A501000755246 /* PostSearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostSearchPresenter.m; sourceTree = "<group>"; };
 		DC945CDA1F1A502500755246 /* PostSearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostSearchPresenter.h; sourceTree = "<group>"; };
 		DC945CDB1F1A52E600755246 /* PostSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSearchModel.h; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				DC945CD51F1A4D8C00755246 /* PostSearchView.h */,
-				DC945CD61F1A4D8C00755246 /* PostsListByTagView.m */,
+				DC945CD61F1A4D8C00755246 /* PostsSearchView.m */,
 				DC945CDA1F1A502500755246 /* PostSearchPresenter.h */,
 				DC945CD81F1A501000755246 /* PostSearchPresenter.m */,
 				DC945CDB1F1A52E600755246 /* PostSearchModel.h */,
@@ -410,7 +410,7 @@
 				DC945CD91F1A501000755246 /* PostSearchPresenter.m in Sources */,
 				DC945CB41F1A45FA00755246 /* AppDelegate.m in Sources */,
 				DC945CE91F1C10A300755246 /* LoginView.m in Sources */,
-				DC945CD71F1A4D8C00755246 /* PostsListByTagView.m in Sources */,
+				DC945CD71F1A4D8C00755246 /* PostsSearchView.m in Sources */,
 				DC945CB11F1A45FA00755246 /* main.m in Sources */,
 				DC945CE11F1A583A00755246 /* InstagramService.m in Sources */,
 				DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */,
