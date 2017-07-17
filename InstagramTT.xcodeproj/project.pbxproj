@@ -20,6 +20,7 @@
 		DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CDC1F1A52E600755246 /* PostSearchModel.m */; };
 		DC945CE11F1A583A00755246 /* InstagramService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CE01F1A583A00755246 /* InstagramService.m */; };
 		DC945CE91F1C10A300755246 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CE81F1C10A300755246 /* LoginView.m */; };
+		DC945CF11F1D0F7F00755246 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = DC945CF01F1D0F7F00755246 /* Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		DC945CE41F1A5A6000755246 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		DC945CE71F1C10A300755246 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		DC945CE81F1C10A300755246 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		DC945CEF1F1D0F7F00755246 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		DC945CF01F1D0F7F00755246 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		FC7A2C8C1B7B6BFC21328C99 /* Pods-InstagramTTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTTTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramTTTests/Pods-InstagramTTTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +121,7 @@
 		DC945CAE1F1A45FA00755246 /* InstagramTT */ = {
 			isa = PBXGroup;
 			children = (
+				DC945CEE1F1D0F6100755246 /* Helpers */,
 				DC945CDE1F1A56CE00755246 /* Services */,
 				DC945CE61F1C105C00755246 /* Login */,
 				DC945CD41F1A4CB100755246 /* PostSearch */,
@@ -178,6 +182,15 @@
 				DC945CE81F1C10A300755246 /* LoginView.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		DC945CEE1F1D0F6100755246 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC945CEF1F1D0F7F00755246 /* Helpers.h */,
+				DC945CF01F1D0F7F00755246 /* Helpers.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		DF93975F7637F85E25DA64E0 /* Frameworks */ = {
@@ -401,6 +414,7 @@
 				DC945CB11F1A45FA00755246 /* main.m in Sources */,
 				DC945CE11F1A583A00755246 /* InstagramService.m in Sources */,
 				DC945CDD1F1A52E600755246 /* PostSearchModel.m in Sources */,
+				DC945CF11F1D0F7F00755246 /* Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,10 @@
 
 @implementation PostSearchView
 
++(NSString*) identifier {
+    return @"PostSearchView";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

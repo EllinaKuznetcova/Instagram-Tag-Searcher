@@ -15,4 +15,6 @@
 
 @interface PostSearchView : UIViewController <IPostSearchView>
 
++(NSString*) identifier;
+
 @end

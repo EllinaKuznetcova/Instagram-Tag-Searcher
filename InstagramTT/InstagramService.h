@@ -14,6 +14,8 @@
 
 @interface InstagramService : NSObject<IInstagramService>
 
+-(BOOL) isAuthorized;
+
 -(BOOL) checkTokenAndSaveFromURL:(NSURL *)url
                            error:(NSError *__autoreleasing *)error;
 

@@ -12,6 +12,10 @@
 
 @implementation InstagramService
 
+-(BOOL) isAuthorized {
+    return [[InstagramEngine sharedEngine] isSessionValid];
+}
+
 -(NSURL*) authorizationURL {
     return [[InstagramEngine sharedEngine] authorizationURL];
 }
