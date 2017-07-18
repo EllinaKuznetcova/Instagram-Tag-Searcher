@@ -32,17 +32,26 @@
     
 }
 
--(void) loadingSucceded:(NSArray*)posts {
-    
+-(void) loadingSucceded:(NSArray<InstaPost*> *)posts {
+    [self.view updateViews:posts];
+    if (posts.count > 0) {
+        [self.view hidePlaceholder];
+    } else {
+        [self.view showPlaceholder];
+    }
 }
 
 -(void) loadingFailed:(NSError*)error {
-    
+    [self.view showError:error];
 }
 
 #pragma mark - View's presenter methods
 -(void) searchTappedWithText:(NSString*)text {
-    
+    [self.model searchPostsByTag:text];
+}
+
+-(NSArray<InstaPost*> *) cachedPosts {
+    return [self.model cachedPosts];
 }
 
 @end

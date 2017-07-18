@@ -12,6 +12,7 @@
 @protocol IPostSearchModel <NSObject>
 
 -(void) searchPostsByTag:(NSString*)tag;
+-(NSArray<InstaPost *> *) cachedPosts;
 
 @end
 

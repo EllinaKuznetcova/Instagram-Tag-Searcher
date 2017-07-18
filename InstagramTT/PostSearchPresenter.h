@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PostSearchView.h"
+#import "InstaPost.h"
 
 @protocol IPostSearchModelPresenter <NSObject>
 
 -(void) loadingStarted;
--(void) loadingSucceded:(NSArray*)posts;
+-(void) loadingSucceded:(NSArray<InstaPost*> *)posts;
 -(void) loadingFailed:(NSError*)error;
 
 @end
@@ -20,6 +21,7 @@
 @protocol IPostSearchViewPresenter <NSObject>
 
 -(void) searchTappedWithText:(NSString*)text;
+-(NSArray<InstaPost *> *) cachedPosts;
 
 @end
 

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstaPost.h"
 
 @protocol IPostSearchView <NSObject>
 
--(void) updateViews:(NSArray*)posts;
+-(void) updateViews:(NSArray<InstaPost *> *)posts;
 -(void) showError:(NSError*)error;
 -(void) showPlaceholder;
 -(void) hidePlaceholder;

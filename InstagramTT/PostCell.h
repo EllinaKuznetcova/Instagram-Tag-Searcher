@@ -16,6 +16,6 @@
 
 +(NSString*) identifier;
 
--(void) prepareCell:(NSURL*)url likesCount:(NSString*)likesCount comment:(NSString*)comment;
+-(void) prepareCell:(NSURL*)url likesCount:(NSInteger)likesCount comment:(NSString*)comment;
 
 @end

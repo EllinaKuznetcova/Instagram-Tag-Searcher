@@ -12,6 +12,7 @@
 @interface PostSearchModel()
 
 @property (weak) id<IPostSearchModelPresenter> presenter;
+@property NSArray<InstaPost*> *loadedPosts;
 
 @end
 
@@ -29,10 +30,16 @@
 -(void) searchPostsByTag:(NSString*)tag {
     __weak typeof(self)wself = self;
     [[[InstagramService alloc] init] searchPostsByTag:tag withSuccess:^(NSArray<InstaPost *> *posts) {
+        wself.loadedPosts = posts;
         [wself.presenter loadingSucceded:posts];
     } failure:^(NSError *error, NSInteger serverStatusCode) {
         [wself.presenter loadingFailed:error];
     }];
+}
+
+
+-(NSArray<InstaPost *> *) cachedPosts {
+    return self.loadedPosts;
 }
 
 @end

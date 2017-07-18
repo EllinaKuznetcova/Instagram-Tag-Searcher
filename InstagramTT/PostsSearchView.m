@@ -30,6 +30,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self.presenter searchTappedWithText:@"test"];
 }
 
 -(void) initializeMVP {
@@ -38,8 +40,8 @@
 
 #pragma mark - IPostSearchView Methods
 
--(void) updateViews:(NSArray *)posts {
-    
+-(void) updateViews:(NSArray<InstaPost *> *)posts {
+    [self.tableView reloadData];
 }
 
 -(void) showError:(NSError *)error {
@@ -57,15 +59,15 @@
 #pragma mark - TableView DataSource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //TODO: add methods to presenter interface to retrieve number ob objects
-    return 10;
+    return self.presenter.cachedPosts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell* cell = [tableView dequeueReusableCellWithIdentifier:[PostCell identifier]];
-    [cell prepareCell:[NSURL URLWithString:@"https://ellinakuznetcova.github.io/images/avatars/avatar.png"]
-           likesCount:@"10"
-           comment:@"Some cool comment"];
+    InstaPost* post = self.presenter.cachedPosts[indexPath.row];
+    [cell prepareCell:post.imageLink
+           likesCount:post.likesCount
+           comment:post.comment];
     return cell;
 }
 

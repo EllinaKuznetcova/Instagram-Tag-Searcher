@@ -15,9 +15,9 @@
     return NSStringFromClass([self class]);
 }
 
--(void) prepareCell:(NSURL *)url likesCount:(NSString *)likesCount comment:(NSString *)comment {
+-(void) prepareCell:(NSURL *)url likesCount:(NSInteger)likesCount comment:(NSString *)comment {
     [self.instaImage sd_setImageWithURL:url];
-    self.likesCountLabel.text = [NSString stringWithFormat:@"%@ likes", likesCount];
+    self.likesCountLabel.text = [NSString stringWithFormat:@"%li likes", (long)likesCount];
     self.commentLabel.text = comment;
 }
 
