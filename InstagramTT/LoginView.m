@@ -22,9 +22,9 @@
     [super viewDidLoad];
     
     WKWebViewConfiguration* configuration = [[WKWebViewConfiguration alloc] init];
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
+    self.webView = [[WKWebView alloc] initWithFrame:self.webViewContainer.frame configuration:configuration];
     self.webView.navigationDelegate = self;
-    self.webViewContainer = self.webView;
+    [self.webViewContainer addSubview:self.webView];
     
     NSURL *authURL = [[[InstagramService alloc] init] authorizationURL];
     [self.webView loadRequest:[NSURLRequest requestWithURL:authURL]];
@@ -33,7 +33,6 @@
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(nonnull WKNavigationAction *)navigationAction decisionHandler:(nonnull void (^)(WKNavigationActionPolicy))decisionHandler
 {
     NSError *error;
-    
     if ([[[InstagramService alloc] init] checkTokenAndSaveFromURL:navigationAction.request.URL error:&error]) {
         decisionHandler(WKNavigationActionPolicyCancel);
         [Helpers showPostSearchController];
