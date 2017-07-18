@@ -30,12 +30,15 @@
     [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-    [self.presenter searchTappedWithText:@"test"];
 }
 
 -(void) initializeMVP {
     self.presenter = [[PostSearchPresenter alloc] initWithView:self];
+}
+
+#pragma mark - Search Bar Delegate Methods
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.presenter searchTappedWithText:searchBar.text];
 }
 
 #pragma mark - IPostSearchView Methods

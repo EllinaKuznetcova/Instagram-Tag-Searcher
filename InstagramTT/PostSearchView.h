@@ -18,7 +18,7 @@
 
 @end
 
-@interface PostSearchView : UIViewController <IPostSearchView, UITableViewDelegate, UITableViewDataSource>
+@interface PostSearchView : UIViewController <IPostSearchView, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
