@@ -22,6 +22,10 @@
     return @"PostSearchView";
 }
 
+-(void) initializeMVP {
+    self.presenter = [[PostSearchPresenter alloc] initWithView:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,10 +34,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-}
-
--(void) initializeMVP {
-    self.presenter = [[PostSearchPresenter alloc] initWithView:self];
 }
 
 #pragma mark - Search Bar Delegate Methods
@@ -48,7 +48,11 @@
 }
 
 -(void) showError:(NSError *)error {
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Error occured" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
     
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [self presentViewController:alertController animated:true completion:nil];
 }
 
 -(void) showPlaceholder {
