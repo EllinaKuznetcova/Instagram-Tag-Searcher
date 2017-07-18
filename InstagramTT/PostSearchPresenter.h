@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol IPostSearchPresenter <NSObject>
+@protocol IPostSearchModelPresenter <NSObject>
 
+-(void) loadingStarted;
+-(void) loadingSucceded:(NSArray*)posts;
+-(void) loadingFailed:(NSError*)error;
 
 @end
 
-@interface PostSearchPresenter : NSObject <IPostSearchPresenter>
+@protocol IPostSearchViewPresenter <NSObject>
+
+-(void) searchTappedWithText:(NSString*)text;
+
+@end
+
+@interface PostSearchPresenter : NSObject <IPostSearchModelPresenter, IPostSearchViewPresenter>
 
 @end
 

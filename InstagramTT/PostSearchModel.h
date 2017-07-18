@@ -10,6 +10,7 @@
 
 @protocol IPostSearchModel <NSObject>
 
+-(void) searchPostsByTag:(NSString*)tag;
 
 @end
 

@@ -10,6 +10,10 @@
 
 @protocol IPostSearchView <NSObject>
 
+-(void) updateViews:(NSArray*)posts;
+-(void) showError:(NSError*)error;
+-(void) showPlaceholder;
+-(void) hidePlaceholder;
 
 @end
 
