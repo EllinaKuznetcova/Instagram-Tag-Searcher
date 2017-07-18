@@ -8,6 +8,7 @@ target 'InstagramTT' do
   # Pods for InstagramTT
 
   pod 'InstagramKit', '~> 3.0'
+  pod 'SDWebImage'
 
   target 'InstagramTTTests' do
     inherit! :search_paths

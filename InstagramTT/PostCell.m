@@ -7,6 +7,7 @@
 //
 
 #import "PostCell.h"
+@import SDWebImage;
 
 @implementation PostCell
 
@@ -15,6 +16,7 @@
 }
 
 -(void) prepareCell:(NSURL *)url likesCount:(NSString *)likesCount comment:(NSString *)comment {
+    [self.instaImage sd_setImageWithURL:url];
     self.likesCountLabel.text = [NSString stringWithFormat:@"%@ likes", likesCount];
     self.commentLabel.text = comment;
 }

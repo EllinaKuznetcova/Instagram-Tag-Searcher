@@ -23,7 +23,7 @@
     [super viewDidLoad];
 
     [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
-    self.tableView.estimatedRowHeight = 100;
+    self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
@@ -36,7 +36,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell* cell = [tableView dequeueReusableCellWithIdentifier:[PostCell identifier]];
-    [cell prepareCell:nil likesCount:@"10" comment:@"Some cool comment"];
+    [cell prepareCell:[NSURL URLWithString:@"https://ellinakuznetcova.github.io/images/avatars/avatar.png"]
+           likesCount:@"10"
+           comment:@"Some cool comment"];
     return cell;
 }
 
