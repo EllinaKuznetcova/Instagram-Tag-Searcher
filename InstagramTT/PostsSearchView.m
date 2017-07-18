@@ -69,6 +69,7 @@
     PostCell* cell = [tableView dequeueReusableCellWithIdentifier:[PostCell identifier]];
     InstaPost* post = self.presenter.cachedPosts[indexPath.row];
     [cell prepareCell:post.imageLink
+        withImageSize:post.imageSize
            likesCount:post.likesCount
            comment:post.comment];
     return cell;

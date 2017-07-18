@@ -14,8 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *likesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
+
 +(NSString*) identifier;
 
--(void) prepareCell:(NSURL*)url likesCount:(NSInteger)likesCount comment:(NSString*)comment;
+-(void) prepareCell:(NSURL*)url withImageSize:(CGSize)imageSize likesCount:(NSInteger)likesCount comment:(NSString*)comment;
 
 @end
