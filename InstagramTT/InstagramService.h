@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InstaPost.h"
 
 @protocol IInstagramService <NSObject>
 
@@ -21,4 +22,7 @@
 
 -(NSURL*)authorizationURL;
 
+-(void)searchPostsByTag:(NSString*)tagText
+            withSuccess:(void (^)(NSArray<InstaPost *> *posts))successBlock
+                failure:(void (^) (NSError* error, NSInteger serverStatusCode))failureBlock;
 @end

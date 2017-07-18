@@ -7,6 +7,7 @@
 //
 
 #import "PostSearchModel.h"
+#import "InstagramService.h"
 
 @interface PostSearchModel()
 
@@ -26,7 +27,12 @@
 
 #pragma mark - IPostSearchModel methods
 -(void) searchPostsByTag:(NSString*)tag {
-    
+    __weak typeof(self)wself = self;
+    [[[InstagramService alloc] init] searchPostsByTag:tag withSuccess:^(NSArray<InstaPost *> *posts) {
+        [wself.presenter loadingSucceded:posts];
+    } failure:^(NSError *error, NSInteger serverStatusCode) {
+        [wself.presenter loadingFailed:error];
+    }];
 }
 
 @end
