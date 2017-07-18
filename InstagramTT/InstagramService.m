@@ -36,7 +36,7 @@
                 post.imageLink = mediaObject.standardResolutionImageURL;
                 post.imageSize = mediaObject.standardResolutionImageFrameSize;
                 post.likesCount = mediaObject.likesCount;
-                post.comment = mediaObject.comments.firstObject.text;
+                post.comment = mediaObject.caption.text;
                 [posts addObject:post];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
