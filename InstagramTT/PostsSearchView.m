@@ -52,11 +52,11 @@
 }
 
 -(void) showPlaceholder {
-    
+    [self.noPostsLabel setHidden:NO];
 }
 
 -(void) hidePlaceholder {
-    
+    [self.noPostsLabel setHidden:YES];
 }
 
 #pragma mark - TableView DataSource Methods

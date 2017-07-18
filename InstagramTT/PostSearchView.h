@@ -21,6 +21,7 @@
 @interface PostSearchView : UIViewController <IPostSearchView, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *noPostsLabel;
 
 +(NSString*) identifier;
 
