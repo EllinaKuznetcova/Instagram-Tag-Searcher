@@ -11,6 +11,7 @@
 
 @protocol IPostSearchView <NSObject>
 
+-(void) loadingStarted;
 -(void) updateViews:(NSArray<InstaPost *> *)posts;
 -(void) showError:(NSError*)error;
 -(void) showPlaceholder;
@@ -22,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *noPostsLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 +(NSString*) identifier;
 

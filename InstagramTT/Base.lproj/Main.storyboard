@@ -75,6 +75,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lWr-f7-6OB">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -83,15 +86,18 @@
                             <constraint firstAttribute="trailing" secondItem="jlb-5y-WDc" secondAttribute="trailing" constant="16" id="A8N-VI-DiJ"/>
                             <constraint firstItem="olv-8j-BJZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fm4-Fq-xQs"/>
                             <constraint firstItem="jGR-VW-MFn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ip7-TN-TvF"/>
+                            <constraint firstItem="lWr-f7-6OB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QoG-uC-ICv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="olv-8j-BJZ" secondAttribute="bottom" id="SNS-Pd-CTm"/>
                             <constraint firstItem="jlb-5y-WDc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T2i-Fb-p4t"/>
                             <constraint firstAttribute="trailing" secondItem="olv-8j-BJZ" secondAttribute="trailing" id="VLg-wd-pQD"/>
                             <constraint firstItem="jlb-5y-WDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VMT-on-Il5"/>
                             <constraint firstItem="olv-8j-BJZ" firstAttribute="top" secondItem="jGR-VW-MFn" secondAttribute="bottom" constant="8" id="iag-dH-yLn"/>
                             <constraint firstAttribute="trailing" secondItem="jGR-VW-MFn" secondAttribute="trailing" id="sgg-sN-LxS"/>
+                            <constraint firstItem="lWr-f7-6OB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xEF-G2-7XV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="lWr-f7-6OB" id="BKY-b9-cDQ"/>
                         <outlet property="noPostsLabel" destination="jlb-5y-WDc" id="NUy-PW-dHF"/>
                         <outlet property="tableView" destination="olv-8j-BJZ" id="E4w-cB-4tG"/>
                     </connections>

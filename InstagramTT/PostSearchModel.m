@@ -28,6 +28,7 @@
 
 #pragma mark - IPostSearchModel methods
 -(void) searchPostsByTag:(NSString*)tag {
+    [self.presenter loadingStarted];
     __weak typeof(self)wself = self;
     [[[InstagramService alloc] init] searchPostsByTag:tag withSuccess:^(NSArray<InstaPost *> *posts) {
         wself.loadedPosts = posts;

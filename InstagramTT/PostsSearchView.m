@@ -43,7 +43,12 @@
 
 #pragma mark - IPostSearchView Methods
 
+-(void) loadingStarted {
+    [self.activityIndicator startAnimating];
+}
+
 -(void) updateViews:(NSArray<InstaPost *> *)posts {
+    [self.activityIndicator stopAnimating];
     [self.tableView reloadData];
 }
 

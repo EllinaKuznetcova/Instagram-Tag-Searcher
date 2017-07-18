@@ -29,7 +29,8 @@
 
 #pragma mark - Model's presenter methods
 -(void) loadingStarted {
-    
+    [self.view loadingStarted];
+    [self.view hidePlaceholder];
 }
 
 -(void) loadingSucceded:(NSArray<InstaPost*> *)posts {
