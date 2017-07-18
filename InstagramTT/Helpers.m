@@ -12,10 +12,6 @@
 
 @implementation Helpers
 
--(void) PresentViewController: (UIViewController*) controller animated:(BOOL) isAnimated {
-    
-}
-
 +(void) showLoginController {
     UIViewController* controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
     [[[UIApplication sharedApplication] delegate] window].rootViewController = controller;
