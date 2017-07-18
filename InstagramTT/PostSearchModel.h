@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PostSearchPresenter.h"
 
 @protocol IPostSearchModel <NSObject>
 
@@ -15,5 +16,7 @@
 @end
 
 @interface PostSearchModel : NSObject <IPostSearchModel>
+
+- (instancetype)initWithPresenter:(id<IPostSearchModelPresenter>)presenter;
 
 @end

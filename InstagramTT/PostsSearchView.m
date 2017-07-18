@@ -8,8 +8,11 @@
 
 #import "PostSearchView.h"
 #import "PostCell.h"
+#import "PostSearchPresenter.h"
 
 @interface PostSearchView ()
+
+@property id<IPostSearchViewPresenter> presenter;
 
 @end
 
@@ -21,10 +24,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self initializeMVP];
+    
     [self.tableView registerNib:[UINib nibWithNibName:[PostCell identifier] bundle:nil]  forCellReuseIdentifier:[PostCell identifier]];
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+-(void) initializeMVP {
+    self.presenter = [[PostSearchPresenter alloc] initWithView:self];
+}
+
+#pragma mark - IPostSearchView Methods
+
+-(void) updateViews:(NSArray *)posts {
+    
+}
+
+-(void) showError:(NSError *)error {
+    
+}
+
+-(void) showPlaceholder {
+    
+}
+
+-(void) hidePlaceholder {
+    
 }
 
 #pragma mark - TableView DataSource Methods

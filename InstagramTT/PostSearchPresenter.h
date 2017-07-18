@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostSearchView.h"
 
 @protocol IPostSearchModelPresenter <NSObject>
 
@@ -23,6 +24,8 @@
 @end
 
 @interface PostSearchPresenter : NSObject <IPostSearchModelPresenter, IPostSearchViewPresenter>
+
+- (instancetype)initWithView:(id<IPostSearchView>)view;
 
 @end
 
